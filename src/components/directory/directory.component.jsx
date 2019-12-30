@@ -13,7 +13,16 @@ class Directory extends React.Component{
     this.state = {
       sections: [
         {
-          titl
+          title: 'Men',
+          imageUrl: 'http://seoulbeats.com/wp-content/uploads/2014/10/20141012_seoulbeats_EpikHigh.png',
+          size: 'large',
+          id: 5
+        },
+        {
+          title: 'Women',
+          imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc1BOCTzKet7ACvH4o7rXBNYJ0ZJVMZHGq27WG68l-83zEdjnC&s',
+          size: 'large',
+          id: 4
         }
       ]
 
@@ -24,10 +33,12 @@ class Directory extends React.Component{
 
     return(
       <div className='directory-menu'>
-        {
-
-        }
+        {this.state.sections.map(( {title, imageUrl, id, size}) => (
+          <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
+        ))}
       </div>
     )
   }
 }
+
+export default Directory;
