@@ -13,16 +13,16 @@ class Directory extends React.Component{
     this.state = {
       sections: [
         {
+          title: 'Women',
+          imageUrl: 'https://i.pinimg.com/originals/fd/cb/7e/fdcb7efe0587f1d09d91ac8f0ada2570.jpg',
+          size: 'large',
+          id: 4
+        },
+        {
           title: 'Men',
           imageUrl: 'http://seoulbeats.com/wp-content/uploads/2014/10/20141012_seoulbeats_EpikHigh.png',
           size: 'large',
           id: 5
-        },
-        {
-          title: 'Women',
-          imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc1BOCTzKet7ACvH4o7rXBNYJ0ZJVMZHGq27WG68l-83zEdjnC&s',
-          size: 'large',
-          id: 4
         }
       ]
 
