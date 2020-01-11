@@ -1,14 +1,12 @@
 import React from 'react';
 
+import SignIn from '../components/signin/signin.component';
 
 
-const SignInPage = () => (
-
-
-  <div className='signin'>
-    SIGN IN
+const SignInAndSignUpPage = () => (
+  <div className='sign-in-and-sign-up'>
+    <SignIn />
   </div>
-)
+);
 
-
-export default SignInPage;
+export default SignInAndSignUpPage;
