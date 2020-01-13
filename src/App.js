@@ -3,17 +3,17 @@ import { Route, Switch} from 'react-router-dom';
 
 import './App.css';
 
-import Header from './components/header/header.component';
 import HomePage from './pages/homepage.component';
 import ShopPage from './pages/shop/shop.component';
 import SignInPage from './pages/signin.component';
+import Header from './components/header/header.component';
 
 // homepage url can be '/' using react route
 
-import { auth } from './firebase/firebase.utils';
+import {auth} from './firebase/firebase.utils';
 // in order to have the user state, turn the App in to state component
 
-class App extends React.component {
+class App extends React.Component {
   constructor() {
     super();
 
@@ -35,10 +35,13 @@ class App extends React.component {
     // as long APP component is mounted on DOM
     this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
       this.setState({currentUser: user});
-    })
+      console.log(user)
+    });
+
+    
   }
 
-  componentwillUnmount() {
+  componentWillUnmount() {
     //life cycle method. new
     this.unsubscribeFromAuth();
   }
