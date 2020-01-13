@@ -10,4 +10,5 @@ const CustomButton = ( {children, ...otherProps} ) => (
 
 export default CustomButton;
 
-// not sure what happened
+//move on to firebase
+// learn more about backend
