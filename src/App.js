@@ -10,21 +10,56 @@ import SignInPage from './pages/signin.component';
 
 // homepage url can be '/' using react route
 
-function App() {
-  return (
-    <div >
+import { auth } from './firebase/firebase.utils';
+// in order to have the user state, turn the App in to state component
+
+class App extends React.component {
+  constructor() {
+    super();
+
+    this.state = {
+      currentUser: null
+    }
+  }
+
+  unsubscribeFromAuth = null;
+
+  //componentDidMount() => usually done to fetch data for users from backend
+  // but firebase does that for us
+  // firebase authstatechanged
+  // firebase does session storage for us also. onAuthStateChanged does session 
+  // set up actual safe persistence of users
+  // OAuth allows third party entry and makes user sign up easy
+  componentDidMount(){
+    // this is open subscription or messaging between app and firebase
+    // as long APP component is mounted on DOM
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
+      this.setState({currentUser: user});
+    })
+  }
+
+  componentwillUnmount() {
+    //life cycle method. new
+    this.unsubscribeFromAuth();
+  }
+
+
+  render(){
+    return (
+      <div >
+        
+        <Header/>
+        <Switch>
+
+          <Route exact path='/' component={HomePage} />
+          <Route path='/shop' component={ShopPage} />
+          <Route path='/signin' component={SignInPage} />
+        </Switch>
+
       
-      <Header/>
-      <Switch>
-
-        <Route exact path='/' component={HomePage} />
-        <Route path='/shop' component={ShopPage} />
-        <Route path='/signin' component={SignInPage} />
-      </Switch>
-
-    
-    </div>
-  );
+      </div>
+    );
+  }
 }
 
 export default App;
