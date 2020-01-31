@@ -13,6 +13,24 @@ const config = {
   measurementId: "G-6E6LLT2EPB"
 };
 
+export const createUserProfileDocument = async (userAuth, addtionalData) => {
+  // google OAuth return null when signing out. 
+  // check that sign button when clicked returns an object
+
+  if (!userAuth) return; 
+
+  //if userAuth returns, query the firebase data to see if it exists.
+  // if not save to db
+
+  // firebase returns two types of objs. references and snapshots
+  // both types can be document or collection versions
+
+  
+
+}
+
+
+
 firebase.initializeApp(config);
 
 export const auth = firebase.auth();
