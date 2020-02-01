@@ -10,7 +10,7 @@ import Header from './components/header/header.component';
 
 // homepage url can be '/' using react route
 
-import {auth} from './firebase/firebase.utils';
+import {auth, createUserProfileDocument} from './firebase/firebase.utils';
 // in order to have the user state, turn the App in to state component
 
 class App extends React.Component {
@@ -33,8 +33,8 @@ class App extends React.Component {
   componentDidMount(){
     // this is open subscription or messaging between app and firebase
     // as long APP component is mounted on DOM
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-      this.setState({currentUser: user});
+    this.unsubscribeFromAuth = auth.onAuthStateChanged( async user => {
+      createUserProfileDocument(user);
     });
 
     

@@ -25,7 +25,17 @@ export const createUserProfileDocument = async (userAuth, addtionalData) => {
   // firebase returns two types of objs. references and snapshots
   // both types can be document or collection versions
 
+  console.log(userAuth);
+
+  const userRef = firestore.doc(`users/${userAuth.uid}`);
+  // following the auth path, the userAuth will receive uid
+  // check if that userAuth.uid exists
+
+  // snapShot will have a .exists property that shows if there is anydata there
+  const snapShot = await userRef.get();
   
+
+  console.log(snapShot);
 
 }
 
