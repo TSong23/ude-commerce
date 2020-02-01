@@ -32,10 +32,25 @@ export const createUserProfileDocument = async (userAuth, addtionalData) => {
   // check if that userAuth.uid exists
 
   // snapShot will have a .exists property that shows if there is anydata there
-  const snapShot = await userRef.get();
-  
-
-  console.log(snapShot);
+  // if it doesn't exist, POST to database
+  // firebase requires that you use documentRef objs to perform CRUD
+  const snapShot = await userRef.get();  
+  if (!snapShot.exists) {
+    // spread out data we need from props userAuth and JS Date method
+    const { displayName, email, } = userAuth;
+    const createdAt = new Date ();
+    // userRef.set => firebase method to perform PUT action
+    try {
+      await userRef.set({
+        displayName,
+        email,
+        createdAt,
+        ... addtionalData
+      })
+    } catch {
+      console.log('error creating user')
+    }
+  }  
 
 }
 

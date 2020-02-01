@@ -33,7 +33,11 @@ class App extends React.Component {
   componentDidMount(){
     // this is open subscription or messaging between app and firebase
     // as long APP component is mounted on DOM
-    this.unsubscribeFromAuth = auth.onAuthStateChanged( async user => {
+    // using this subscription, get userAuth obj and ref and pass as props to createProfile
+    this.unsubscribeFromAuth = auth.onAuthStateChanged( async userAuth => {
+      if (userAuth) {
+        const userRef = 
+      }
       createUserProfileDocument(user);
     });
 
