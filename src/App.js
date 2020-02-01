@@ -36,9 +36,24 @@ class App extends React.Component {
     // using this subscription, get userAuth obj and ref and pass as props to createProfile
     this.unsubscribeFromAuth = auth.onAuthStateChanged( async userAuth => {
       if (userAuth) {
-        const userRef = 
+        const userRef = await createUserProfileDocument(userAuth);
+        
+        userRef.onSnapshot( snapShot => {
+          // snapShot object sends only snapShot. we get full data after calling
+          // .data() method on the snapShot obj
+          this.setState({
+            currentUser: {
+              id: snapShot.id,
+              ...snapShot.data()
+
+            }
+          });
+
+        })
+      } else {
+        
       }
-      createUserProfileDocument(user);
+
     });
 
     
