@@ -25,8 +25,6 @@ export const createUserProfileDocument = async (userAuth, addtionalData) => {
   // firebase returns two types of objs. references and snapshots
   // both types can be document or collection versions
 
-  console.log(userAuth);
-
   const userRef = firestore.doc(`users/${userAuth.uid}`);
   // following the auth path, the userAuth will receive uid
   // check if that userAuth.uid exists
@@ -47,11 +45,11 @@ export const createUserProfileDocument = async (userAuth, addtionalData) => {
         createdAt,
         ... addtionalData
       })
-    } catch {
+    } catch (error){
       console.log('error creating user')
     }
   }  
-
+  return userRef;
 }
 
 
