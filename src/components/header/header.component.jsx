@@ -1,5 +1,12 @@
+// connect is higher order component
+// higher component is function that take in component and return new component
+// use mstp and mdtp to have this component pull the correct information from the 
+// redux store
+
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
+
 
 import { auth } from '../../firebase/firebase.utils';
 
@@ -34,4 +41,10 @@ const Header = ({currentUser}) => (
   </div>
 )
 
-export default Header;
+const mapStateToProps = (state) => ({
+  currentUser : state.user.currentUser
+});
+
+const mapDispatchToProps = () => ({});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
