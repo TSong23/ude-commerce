@@ -13,27 +13,43 @@ import Header from './components/header/header.component';
 import {auth, createUserProfileDocument} from './firebase/firebase.utils';
 // in order to have the user state, turn the App in to state component
 
-class App extends React.Component {
-  constructor() {
-    super();
+import {connect} from 'react-redux';
+import {setCurrentUser} from './redux/user/user.actions';
 
-    this.state = {
-      currentUser: null
-    }
-  }
+
+///////////////////////////////////////////////////////////////////////////////
+
+/*
+
+1.componentDidMount() => usually done to fetch data for users from backend
+  but firebase does that for us
+
+2.firebase authstatechanged
+  firebase does session storage for us also. onAuthStateChanged does session
+  set up actual safe persistence of users
+  OAuth allows third party entry and makes user sign up easy
+
+3.connect is for connecting this component to store
+4. dispatch: letting redux know that what obj is passed is actually an action
+   obj that needs to be passed to all reducers
+
+*/
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+class App extends React.Component {  
 
   unsubscribeFromAuth = null;
 
-  //componentDidMount() => usually done to fetch data for users from backend
-  // but firebase does that for us
-  // firebase authstatechanged
-  // firebase does session storage for us also. onAuthStateChanged does session 
-  // set up actual safe persistence of users
-  // OAuth allows third party entry and makes user sign up easy
   componentDidMount(){
     // this is open subscription or messaging between app and firebase
     // as long APP component is mounted on DOM
     // using this subscription, get userAuth obj and ref and pass as props to createProfile
+
+    const {setCurrentUser} = this.props;
+
     this.unsubscribeFromAuth = auth.onAuthStateChanged( async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
@@ -41,18 +57,13 @@ class App extends React.Component {
         userRef.onSnapshot( snapShot => {
           // snapShot object sends only snapShot. we get full data after calling
           // .data() method on the snapShot obj
-          this.setState({
-            currentUser: {
-              id: snapShot.id,
-              ...snapShot.data()
-
-            }
+          setCurrentUser({
+            id: snapShot.id,
+            ...snapShot.data()
           });
         })
-      } else {
-        this.setState({currentUser: userAuth});
-      }
-
+      };
+      setCurrentUser(userAuth);
     });
 
     
@@ -80,6 +91,10 @@ class App extends React.Component {
       </div>
     );
   }
-}
+};
 
-export default App;
+const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user))
+});
+
+export default connect(null, mapDispatchToProps)(App);
