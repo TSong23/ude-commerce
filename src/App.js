@@ -33,6 +33,7 @@ import {setCurrentUser} from './redux/user/user.actions';
 4. dispatch: letting redux know that what obj is passed is actually an action
    obj that needs to be passed to all reducers
 
+5. using connect, we were able to seperate the header component from the app
 */
 
 
