@@ -1,4 +1,4 @@
-import CartActionsTypes from './cart.actions';
+import ToggleCartHidden from './cart.actions';
 
 const initial_state = {
   hidden : true
