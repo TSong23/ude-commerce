@@ -1,9 +1,9 @@
 import React from 'react';
 import MenuItem from '../menu-item/menu-item.component';
-
-
 import './directory.component.scss';
 
+import PorcelainCategory from '../../assets/porcelain_category_image.jpg';
+import OthersCategory from '../../assets/others_category_image.jpg';
 
 
 class Directory extends React.Component{
@@ -13,18 +13,18 @@ class Directory extends React.Component{
     this.state = {
       sections: [
         {
-          title: 'Women',
-          imageUrl: 'https://i.pinimg.com/originals/fd/cb/7e/fdcb7efe0587f1d09d91ac8f0ada2570.jpg',
+          title: 'Porcelain',
+          imageUrl: PorcelainCategory,
           size: 'large',
           id: 4, 
-          linkUrl: 'womens'
+          linkUrl: 'porcelain'
         },
         {
-          title: 'Men',
-          imageUrl: 'http://seoulbeats.com/wp-content/uploads/2014/10/20141012_seoulbeats_EpikHigh.png',
+          title: 'Others',
+          imageUrl: OthersCategory,
           size: 'large',
           id: 5,
-          linkUrl: 'mens'
+          linkUrl: 'Others'
         }
       ]
 
