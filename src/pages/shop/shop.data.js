@@ -3,13 +3,13 @@ const ShopData = [
 
   {
     id: 1,
-    title: 'Hats',
-    routeName: 'hats',
+    title: 'Porcelain',
+    routeName: 'porcelain',
     items: [
       {
         id: 1,
         name: 'Brown Brim',
-        imageUrl: 'https://i.ibb.co/ZYW3VTp/brown-brim.png',
+        imageUrl: '../../assets/porcelain_category_image.jpg',
         price: 25
       },
       {
