@@ -17,7 +17,7 @@ const Header = ({currentUser, cartHide}) => (
   <div className='header'>
 
     <Link className='logo-container' to='/'>
-      Home Logo Filler
+      nuieun
     </Link>
 
     <div className='options'>
