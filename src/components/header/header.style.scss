@@ -5,12 +5,13 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
+  font-family: FuturaLT;
 
   .logo-container {
     height: 100%;
     width: 70px;
-    padding: 25px;
-    font-family: FuturaLT;
+    padding: 25px;  
+    font-size: 24px; 
   }
 
   .options {
@@ -23,6 +24,7 @@
     .option {
       padding: 10px 15px;
       cursor: pointer;
+      font-size: 14px;
     }
   }
 
