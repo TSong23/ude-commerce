@@ -27,6 +27,7 @@ const Header = ({currentUser, cartHide}) => (
       <Link to='/contact' className='option'>
         CONTACT
       </Link>
+      <CartIcon/>
       {
         currentUser ? 
         <div className='option' onClick={() => auth.signOut()}>SIGN OUT</div>
@@ -36,7 +37,7 @@ const Header = ({currentUser, cartHide}) => (
         </Link>
       }
 
-      <CartIcon/>
+      
     </div>
     {cartHide ? null:  <CartDropdown />}
 
