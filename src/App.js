@@ -5,7 +5,7 @@ import './App.css';
 
 import HomePage from './pages/homepage.component';
 import ShopPage from './pages/shop/shop.component';
-import SignInPage from './pages/signin-up.component';
+// import SignInPage from './pages/signin-up.component';
 import Header from './components/header/header.component';
 
 // homepage url can be '/' using react route

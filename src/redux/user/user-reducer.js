@@ -3,7 +3,7 @@
 // also, make sure the set the prevState to be immutable. just good habit
 // PASS THE initial state value to prevState to create default value
 
-import { userActionTypes} from './user-types';
+// import { userActionTypes} from './user-types';
 
 const INITIAL_STATE = {
   currentUser : null

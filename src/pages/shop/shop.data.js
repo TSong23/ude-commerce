@@ -9,7 +9,7 @@ const ShopData = [
       {
         id: 1,
         name: 'Brown Brim',
-        imageUrl: '../../assets/porcelain_category_image.jpg',
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/ude-commerse.appspot.com/o/Porcelain%2Fporcelain_%20item_1.jpg?alt=media&token=3926b970-2994-4c80-9bfb-3627d9d79756',
         price: 25
       },
       {
