@@ -3,8 +3,8 @@ const ShopData = [
 
   {
     id: 1,
-    title: 'Porcelain',
-    routeName: 'porcelain',
+    title: 'kitchen',
+    routeName: 'kitchen',
     items: [
       {
         id: 1,
@@ -64,8 +64,8 @@ const ShopData = [
   },
   {
     id: 2,
-    title: 'Sneakers',
-    routeName: 'sneakers',
+    title: 'stationary',
+    routeName: 'stationary',
     items: [
       {
         id: 10,
@@ -119,8 +119,8 @@ const ShopData = [
   },
   {
     id: 3,
-    title: 'Jackets',
-    routeName: 'jackets',
+    title: 'fabric',
+    routeName: 'fabric',
     items: [
       {
         id: 18,
@@ -156,8 +156,8 @@ const ShopData = [
   },
   {
     id: 4,
-    title: 'Womens',
-    routeName: 'womens',
+    title: 'home',
+    routeName: 'home',
     items: [
       {
         id: 23,
@@ -205,8 +205,8 @@ const ShopData = [
   },
   {
     id: 5,
-    title: 'Mens',
-    routeName: 'mens',
+    title: 'accessory',
+    routeName: 'accessory',
     items: [
       {
         id: 30,

@@ -7,7 +7,7 @@ const Preview = ({title, items}) => (
 
   <div className='collection-preview'>
 
-    <h1 className='title'>{title.toUpperCase()}</h1>
+    <div className='title'>{title}</div>
     <div className='preview'>
       {
         items
