@@ -3,6 +3,10 @@ import React from 'react';
 import ShopData from './shop.data';
 import Preview from '../../components/preview/preview.component';
 
+import PorcelainCategory from '../../assets/porcelain_category_image.jpg';
+import OthersCategory from '../../assets/others_category_image.jpg';
+
+//keep restyling this page
 
 class ShopPage extends React.Component{
 
@@ -11,13 +15,28 @@ class ShopPage extends React.Component{
 
     this.state = {
       collections: ShopData,
+      sections: [
+        {
+          title: 'Porcelain',
+          imageUrl: PorcelainCategory,
+          size: 'large',
+          id: 4,
+          linkUrl: 'porcelain'
+        },
+        {
+          title: 'Others',
+          imageUrl: OthersCategory,
+          size: 'large',
+          id: 5,
+          linkUrl: 'Others'
+        }
+      ]
     }
 
   }
 
   render() {
-
-    const {collections} = this.state;
+    const collections = this.state.collections;
     return(
 
       <div className='shop-page'>
@@ -27,8 +46,8 @@ class ShopPage extends React.Component{
           ))  
         }
       </div>
-    )
-  }
+    );
+  };
 
 }
 
