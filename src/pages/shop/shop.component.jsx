@@ -6,7 +6,7 @@ import Preview from '../../components/preview/preview.component';
 import PorcelainCategory from '../../assets/porcelain_category_image.jpg';
 import OthersCategory from '../../assets/others_category_image.jpg';
 
-//keep restyling this page
+//Tuesday has come and gone
 
 class ShopPage extends React.Component{
 
