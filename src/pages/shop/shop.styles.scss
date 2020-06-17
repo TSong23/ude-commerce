@@ -1,0 +1,5 @@
+.shop-category-menu{
+  display: grid;
+  grid-template-columns:repeat(auto-fill, minmax(600px, 1000px ));
+  grid-template-rows: auto;
+};
