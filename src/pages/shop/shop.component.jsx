@@ -30,35 +30,35 @@ class ShopPage extends React.Component{
           imageUrl: OthersCategory,
           size: 'large',
           id: 2,
-          linkUrl: 'Others'
+          linkUrl: '/stationary'
         },
         {
           title: 'Fabric',
           imageUrl: OthersCategory,
           size: 'large',
           id: 3,
-          linkUrl: 'Others'
+          linkUrl: '/fabric'
         },
         {
           title: 'Home',
           imageUrl: OthersCategory,
           size: 'large',
           id: 4,
-          linkUrl: 'Others'
+          linkUrl: '/home'
         },
         {
           title: 'Accessory',
           imageUrl: OthersCategory,
           size: 'large',
           id: 5,
-          linkUrl: 'Others'
+          linkUrl: '/accessory'
         },
         {
           title: 'About',
           imageUrl: OthersCategory,
           size: 'large',
           id: 6,
-          linkUrl: 'Others'
+          linkUrl: '/about'
         }
       ]
     };
