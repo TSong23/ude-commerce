@@ -3,6 +3,7 @@ import React from 'react';
 import ShopData from './shop.data';
 import Preview from '../../components/preview/preview.component';
 import MenuItem from '../../components/menu-item/menu-item.component';
+import './shop.styles.scss';
 
 import PorcelainCategory from '../../assets/porcelain_category_image.jpg';
 import OthersCategory from '../../assets/others_category_image.jpg';
@@ -65,17 +66,27 @@ class ShopPage extends React.Component{
 
   render() {
     // const collections = this.state.collections;
-    const sections = this.state.sections;
-    
-    return(
+    const sectionsLeft = this.state.sections.slice(0,3);
+    const sectionsRight = this.state.sections.slice(3,6);
 
-      // <div className='shop-page-div'>
+    return(
+      <div className='shop-page-div'>
         <div className='shop-category-menu'>
-          {sections.map(( {id, ...sectionsProps}) => (
-            <MenuItem key={id} {...sectionsProps}/>
-          ))}
+          {
+            sectionsLeft.map(( {id, ...sectionsProps}) => (
+              <MenuItem key={id} {...sectionsProps}/>
+            ))          
+          }
         </div>
-      // </div>
+        <div className='shop-category-menu'>
+          {
+            sectionsRight.map(({ id, ...sectionsProps }) => (
+              <MenuItem key={id} {...sectionsProps} />
+            ))
+          }
+        </div>
+
+      </div>
 
       
     );
