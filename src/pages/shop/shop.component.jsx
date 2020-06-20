@@ -8,7 +8,9 @@ import './shop.styles.scss';
 import PorcelainCategory from '../../assets/porcelain_category_image.jpg';
 import OthersCategory from '../../assets/others_category_image.jpg';
 
-//Tuesday has come and gone
+// Need to code out what happens when you click on MenuItem
+// currently, it's blank. Probably should load a page(React Component)
+// that has repective items such as porcelain and etc. 
 
 class ShopPage extends React.Component{
 
