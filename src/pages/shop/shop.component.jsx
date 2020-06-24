@@ -15,7 +15,6 @@ class ShopPage extends React.Component{
     super(props);
 
     this.state = {
-      // collections: ShopData,
       sections: [
         {
           title: 'Kitchen',
@@ -26,14 +25,14 @@ class ShopPage extends React.Component{
         },
         {
           title: 'Stationary',
-          imageUrl: 'https://firebasestorage.googleapis.com/v0/b/ude-commerse.appspot.com/o/Stationary%2FIMG_0866.jpeg?alt=media&token=de5e976f-7478-40b1-91ac-aca409380324',
+          imageUrl: 'https://firebasestorage.googleapis.com/v0/b/ude-commerse.appspot.com/o/Stationary%2FIMG_6114.jpeg?alt=media&token=a932c1c3-d556-401f-ad5f-c7ae80befe98',
           size: 'large',
           id: 2,
           linkUrl: '/stationary'
         },
         {
           title: 'Fabric',
-          imageUrl: 'https://firebasestorage.googleapis.com/v0/b/ude-commerse.appspot.com/o/Fabric%2FIMG_0200.jpeg?alt=media&token=50fb5046-c541-42c7-9338-be81a7676d00',
+          imageUrl: 'https://firebasestorage.googleapis.com/v0/b/ude-commerse.appspot.com/o/Fabric%2Fothers_category_image.jpg?alt=media&token=3f82de45-dac3-47af-aaf0-dd1ed9487c63',
           size: 'large',
           id: 3,
           linkUrl: '/fabric'
