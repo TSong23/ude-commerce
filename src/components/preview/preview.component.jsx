@@ -3,23 +3,37 @@ import CollectionItem from '../collection-item/collection-item.component';
 import './preview.component.scss';
 
 
-const Preview = ({title, items}) => (
+class Preview extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      collectionData : []
+    };
+  };
 
-  <div className='collection-preview'>
+  render(){
+    let ShopCategory = this.props.history.location.pathname.split('/').pop();
 
-    <div className='title'>{title}</div>
-    <div className='preview'>
-      {
-        items
-          .filter( (item, idx) => idx < 4 )
-          .map( ( {id, ...itemProps}) => (
-            <CollectionItem key={id} {...itemProps}/>
-          )
-        )
-      }
-    </div>
+    return(
 
-  </div>
-)
+      <div>
+        something
+      </div>
+      // <div className='collection-preview'>
+      //   <div className='title'>{title}</div>
+      //   <div className='preview'>
+      //     {
+      //       items
+      //         .filter( (item, idx) => idx < 4 )
+      //         .map( ( {id, ...itemProps}) => (
+      //           <CollectionItem key={id} {...itemProps}/>
+      //         )
+      //       )
+      //     }
+      //   </div>
+      // </div>
+    );
+  };
+};
 
 export default Preview;

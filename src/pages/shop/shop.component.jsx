@@ -21,42 +21,42 @@ class ShopPage extends React.Component{
           imageUrl: 'https://firebasestorage.googleapis.com/v0/b/ude-commerse.appspot.com/o/Kitchen%2FIMG_3550.jpeg?alt=media&token=b4d5bc0d-0af7-4621-9d30-ae2e88e0a2fd',
           size: 'large',
           id: 1,
-          linkUrl: '/kitchen'
+          linkUrl: 'shop/kitchen'
         },
         {
           title: 'Stationary',
           imageUrl: 'https://firebasestorage.googleapis.com/v0/b/ude-commerse.appspot.com/o/Stationary%2FIMG_6114.jpeg?alt=media&token=a932c1c3-d556-401f-ad5f-c7ae80befe98',
           size: 'large',
           id: 2,
-          linkUrl: '/stationary'
+          linkUrl: 'shop/stationary'
         },
         {
           title: 'Fabric',
           imageUrl: 'https://firebasestorage.googleapis.com/v0/b/ude-commerse.appspot.com/o/Fabric%2Fothers_category_image.jpg?alt=media&token=3f82de45-dac3-47af-aaf0-dd1ed9487c63',
           size: 'large',
           id: 3,
-          linkUrl: '/fabric'
+          linkUrl: 'shop/fabric'
         },
         {
-          title: 'Home',
+          title: 'Others',
           imageUrl: 'https://firebasestorage.googleapis.com/v0/b/ude-commerse.appspot.com/o/Other%2FIMG_2286.jpg?alt=media&token=5df4c96d-c795-428f-87fc-6a206c9dc136',
           size: 'large',
           id: 4,
-          linkUrl: '/home'
+          linkUrl: 'shop/others'
         },
         {
           title: 'Accessory',
           imageUrl: 'https://firebasestorage.googleapis.com/v0/b/ude-commerse.appspot.com/o/Accessory%2FIMG_0200.jpeg?alt=media&token=751a5aa1-343e-4bb6-9f14-bc1024a143c5',
           size: 'large',
           id: 5,
-          linkUrl: '/accessory'
+          linkUrl: 'shop/accessory'
         },
         {
-          title: 'About',
+          title: 'Home',
           imageUrl: 'https://firebasestorage.googleapis.com/v0/b/ude-commerse.appspot.com/o/Other%2FIMGL0566.jpg?alt=media&token=b6870fc4-3cc3-45ea-be0b-e7b26fb3d4be',
           size: 'large',
           id: 6,
-          linkUrl: '/about'
+          linkUrl: '/'
         }
       ]
     };
