@@ -1,10 +1,9 @@
 import React from 'react';
-
-import ShopData from './shop.data';
-import Preview from '../../components/preview/preview.component';
 import MenuItem from '../../components/menu-item/menu-item.component';
 import './shop.styles.scss';
 
+// import ShopData from './shop.data';
+// import Preview from '../../components/preview/preview.component';
 // Need to code out what happens when you click on MenuItem
 // currently, it's blank. Probably should load a page(React Component)
 // that has repective items such as porcelain and etc. 

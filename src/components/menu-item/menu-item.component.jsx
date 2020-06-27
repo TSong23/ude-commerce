@@ -6,10 +6,7 @@ import './menu-item.styles.scss';
 class MenuItem extends React.Component{
   constructor(props){
     super(props);
-
-    // this.handleClick 
   };
-  //  = ({title, imageUrl, size, history, linkUrl, match}) => (
 
   render(){
     return(
