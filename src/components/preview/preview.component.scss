@@ -1,18 +1,5 @@
-
 .collection-preview {
+  margin: 4em 7em 0em 7em;
   display: flex;
-  flex-direction: column;
-  margin-bottom: 30px;
-
-  .title {
-    font-size: 22px;
-    font-family: Avenir;
-    font-weight: normal;
-    margin-bottom: 25px;
-  }
-
-  .preview {
-    display: flex;
-    justify-content: space-between;
-  }
+  flex-direction: row;
 }
